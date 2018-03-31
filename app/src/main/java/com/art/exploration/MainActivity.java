@@ -11,8 +11,10 @@ import android.view.View;
 import com.art.exploration.Chapter1.AActivity;
 
 /**
- * 博客园  http://www.cnblogs.com/jooy/
+ * GitHub  http://www.cnblogs.com/jooy/p/8683167.html
+ * 博客园   http://www.cnblogs.com/jooy/
  * 个人博客 https://www.jooy.top/
+ *
  * Created by machangbao on 2018-3-31 17:32:56
  */
 public class MainActivity extends AppCompatActivity {
