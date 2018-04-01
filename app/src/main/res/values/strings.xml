@@ -96,4 +96,6 @@
     <string name="strLaunchMode">SingleTask启动模式探究:首先从MainActivity启动案例入口AActivity，并在A中启动BActivity，从B启动CActivity，再从C中又启动AActivity， 最后在A中启动B，现在按两次back键，然后回到的是哪个Activity？答案是，回到MainActivity。</string>
     <string name="strWhoFirst">假设当前Activity为A,如果这时用户打开一个新的Activity B,那么B的onResume和A的onPause哪个先执行呢？</string>
     <string name="strStudyScrolling">学习ScrollingActivity</string>
+    <string name="strIntentFilter">IntentFilter意图过滤器，三种匹配规则：action、category、data</string>
+    <string name="strIntentFilterNoAction"><![CDATA[不设置action，设置自定义category，设置相应的data r  失败：仅通过category跳转，intent-filter中仅设置了一个自定义的category；r  成功：Intent可以不指定Action，通过category+data来做跳转,data中仅需设置一个mimeType即可，但是必须设置<action android:name=com.action.mif3 /> 否则隐式跳转无效]]></string>
 </resources>

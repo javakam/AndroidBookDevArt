@@ -25,7 +25,7 @@
             android:name=".Chapter1.ScrollingActivity"
             android:label="@string/title_activity_scrolling"
             android:theme="@style/AppTheme.NoActionBar" />
-        <!--Android启动模式之SingTask探究-->
+        <!-- Android启动模式之SingTask探究 -->
         <activity
             android:name=".Chapter1.launchmode.ALActivity"
             android:launchMode="standard" />
@@ -36,8 +36,65 @@
         <activity
             android:name=".Chapter1.launchmode.CLActivity"
             android:launchMode="singleTask"
-            android:taskAffinity="com.art.singletask1"></activity>
-        <!--END-->
+            android:taskAffinity="com.art.singletask1" />
+        <!-- END -->
+
+
+        <!-- Android意图过滤器 -->
+        <activity android:name=".Chapter1.intentfilter.SelectFilterActivity" />
+        <activity android:name=".Chapter1.intentfilter.MyIntentFilterActivity">
+            <intent-filter>
+
+                <!-- 区分大小写 -->
+                <action android:name="com.action.1" />
+                <action android:name="com.action.2" />
+
+                <!--
+                系统在startActivity或startActivityForResult时会默认为 Intent 加上DEFAULT ,
+                所以为了使我们新建的Activity能够接收隐式调用，就必须在intent-filter中添加DEFAULT的category属性
+                -->
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.category.abc.1" />
+                <category android:name="com.category.abc.2" />
+
+                <!-- 注：如果过滤规则中定义了data，那么Intent中也必须要定义可匹配的data -->
+                <!-- scheme 默认为content和file -->
+                <!-- 不通data标签中的scheme、mimeType属性通用，host、port不通用 -->
+                <data
+                    android:host="www.jooy.top"
+                    android:mimeType="image/*"
+                    android:port="80"
+                    android:scheme="http" />
+                <data
+                    android:host="www.baidu.com"
+                    android:port="8080"
+                    android:scheme="content" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Chapter1.intentfilter.MyIntentFilterActivity2">
+            <intent-filter>
+                <action android:name="com.action.123" />
+
+                <!-- 要么自定义，要么用DEFAULT，否则隐式跳转失败，并抛出异常 ActivityNotFoundException -->
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="video/*" />
+                <data android:mimeType="audio/*" />
+                <data android:mimeType="text/plain" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".Chapter1.intentfilter.MyIntentFilterActivity3">
+            <intent-filter>
+                <action android:name="com.action.mif3" />
+
+                <category android:name="android.intent.category.DEFAULT" /><!--必须有-->
+                <category android:name="com.category.mif3" />
+
+                <!--scheme 默认值 content/file-->
+                <data android:mimeType="video/*" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

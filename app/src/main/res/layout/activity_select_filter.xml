@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.art.exploration.Chapter1.intentfilter.SelectFilterActivity">
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:onClick="action1"
+        android:text="通过自定义action跳转，不设置category（系统在startActivity/startActivityForResult时默认为Intent加上DEFAULT），设置相应的data" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:onClick="action2"
+        android:text="通过自定义action跳转，设置自定义category，设置相应的data" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:onClick="category1"
+        android:text="@string/strIntentFilterNoAction"
+        android:textColor="#f00"
+        android:textSize="12sp" />
+
+</LinearLayout>

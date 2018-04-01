@@ -10,13 +10,14 @@ import android.view.View;
 
 import com.art.exploration.Chapter1.AActivity;
 import com.art.exploration.Chapter1.ScrollingActivity;
+import com.art.exploration.Chapter1.intentfilter.SelectFilterActivity;
 import com.art.exploration.Chapter1.launchmode.ALActivity;
 
 /**
  * GitHub  http://www.cnblogs.com/jooy/p/8683167.html
  * 博客园   http://www.cnblogs.com/jooy/
  * 个人博客 https://www.jooy.top/
- *
+ * <p>
  * Created by machangbao on 2018-3-31 17:32:56
  */
 public class MainActivity extends AppCompatActivity {
@@ -63,6 +64,15 @@ public class MainActivity extends AppCompatActivity {
         startActivity(new Intent(this, ALActivity.class));
     }
 
+    /**
+     * IntentFilter意图过滤器，三种匹配规则：action、category、data
+     * <p>
+     *
+     * @param view
+     */
+    public void test4(View view) {
+        startActivity(new Intent(this, SelectFilterActivity.class));
+    }
     //=========================================================LINE==========================================================//
 
     @Override
