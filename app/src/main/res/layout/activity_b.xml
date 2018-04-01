@@ -6,4 +6,10 @@
     android:layout_height="match_parent"
     tools:context="com.art.exploration.Chapter1.BActivity">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="这是BActivity" />
+
 </android.support.constraint.ConstraintLayout>

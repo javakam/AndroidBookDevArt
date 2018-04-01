@@ -9,6 +9,8 @@ import android.view.MenuItem;
 import android.view.View;
 
 import com.art.exploration.Chapter1.AActivity;
+import com.art.exploration.Chapter1.ScrollingActivity;
+import com.art.exploration.Chapter1.launchmode.ALActivity;
 
 /**
  * GitHub  http://www.cnblogs.com/jooy/p/8683167.html
@@ -25,11 +27,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
     }
 
     /**
+     * Android探究1：假设当前Activity为A,如果这时用户打开一个新的Activity B,那么B的onResume和A的onPause哪个先执行呢？
+     * <p>
      * 博客园：http://www.cnblogs.com/jooy/p/8683167.html
-     * Android读书笔记一：假设当前Activity为A,如果这时用户打开一个新的Activity B,那么B的onResume和A的onPause哪个先执行呢？
      *
      * @param view
      */
@@ -37,6 +41,29 @@ public class MainActivity extends AppCompatActivity {
         startActivity(new Intent(this, AActivity.class));
     }
 
+    /**
+     * 学习ScrollingActivity
+     *
+     * @param view
+     */
+    public void test2(View view) {
+        startActivity(new Intent(this, ScrollingActivity.class));
+    }
+
+    /**
+     * Android探究3：SingleTask启动模式探究:首先从MainActivity启动案例入口AActivity，并在A中启动BActivity，从B启动CActivity，
+     * 再从C中又启动AActivity， 最后在A中启动B，现在按两次back键，然后回到的是哪个Activity？
+     * 答案是，回到MainActivity。
+     * <p>
+     * 博客园：http://www.cnblogs.com/jooy/p/8687192.html
+     *
+     * @param view
+     */
+    public void test3(View view) {
+        startActivity(new Intent(this, ALActivity.class));
+    }
+
+    //=========================================================LINE==========================================================//
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

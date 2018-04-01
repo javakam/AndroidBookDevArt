@@ -20,7 +20,24 @@
             </intent-filter>
         </activity>
         <activity android:name=".Chapter1.AActivity" />
-        <activity android:name=".Chapter1.BActivity"></activity>
+        <activity android:name=".Chapter1.BActivity" />
+        <activity
+            android:name=".Chapter1.ScrollingActivity"
+            android:label="@string/title_activity_scrolling"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <!--Android启动模式之SingTask探究-->
+        <activity
+            android:name=".Chapter1.launchmode.ALActivity"
+            android:launchMode="standard" />
+        <activity
+            android:name=".Chapter1.launchmode.BLActivity"
+            android:launchMode="singleTask"
+            android:taskAffinity="com.art.singletask1" />
+        <activity
+            android:name=".Chapter1.launchmode.CLActivity"
+            android:launchMode="singleTask"
+            android:taskAffinity="com.art.singletask1"></activity>
+        <!--END-->
     </application>
 
 </manifest>
