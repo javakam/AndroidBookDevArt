@@ -9,10 +9,14 @@ import android.view.View;
 import com.art.exploration.R;
 
 /**
+ * 博客园：http://www.cnblogs.com/jooy/p/8691443.html
+ * <p>
  * IntentFilter意图过滤器，三种匹配规则：action、category、data
  * 重：过滤规则中必须设置 '<category android:name="android.intent.category.DEFAULT" />' ，
  * 否则不生效。
  * 也说明，addCategory是一个叠加的属性。源码内部是一个 ArraySet
+ * <p>
+ * Created by javakam on 2018-4-2 monday
  */
 public class SelectFilterActivity extends AppCompatActivity {
 
@@ -54,15 +58,21 @@ public class SelectFilterActivity extends AppCompatActivity {
      * 失败：仅通过category跳转，intent-filter中仅设置了一个自定义的category；\r\n
      * 成功：Intent可以不指定Action，通过category+data来做跳转,data中仅需设置一个mimeType即可，
      * 但必须设置 《action android:name="com.action.mif3"/》 否则隐式跳转无效.
+     * <p>
+     * 问题描述：
+     * 在不指定具体action前提下，
+     * 如果有两个或多个Activity：MyIntentFilterActivity4和MyIntentFilterActivity3等的intent-filter完全相同，
+     * 项目同步是否会出现异常？程序运行是否会崩溃？。
+     * 答：程序不会崩溃，会底部弹窗，按照清单文件注册Activity的顺序依次排列，Act3..Act4..Act5...，点击进入相应的Activity
      *
      * @param view
      */
     public void category1(View view) {
         Intent intent = new Intent();
+
         intent.addCategory("com.category.mif3");
         intent.setDataAndType(Uri.parse("file://abc"), "video/*");
         startActivity(intent);
     }
-
 
 }

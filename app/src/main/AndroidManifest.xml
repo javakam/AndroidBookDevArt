@@ -83,15 +83,36 @@
                 <data android:mimeType="text/plain" />
             </intent-filter>
         </activity>
-
         <activity android:name=".Chapter1.intentfilter.MyIntentFilterActivity3">
             <intent-filter>
                 <action android:name="com.action.mif3" />
 
-                <category android:name="android.intent.category.DEFAULT" /><!--必须有-->
+                <category android:name="android.intent.category.DEFAULT" /> <!-- 必须有 -->
                 <category android:name="com.category.mif3" />
 
-                <!--scheme 默认值 content/file-->
+                <!-- scheme 默认值 content/file -->
+                <data android:mimeType="video/*" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Chapter1.intentfilter.MyIntentFilterActivity4">
+            <intent-filter>
+                <action android:name="com.action.mif3" />
+
+                <category android:name="android.intent.category.DEFAULT" /> <!-- 必须有 -->
+                <category android:name="com.category.mif3" />
+
+                <!-- scheme 默认值 content/file -->
+                <data android:mimeType="video/*" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Chapter1.intentfilter.MyIntentFilterActivity5">
+            <intent-filter>
+                <action android:name="com.action.mif3" />
+
+                <category android:name="android.intent.category.DEFAULT" /> <!-- 必须有 -->
+                <category android:name="com.category.mif3" />
+
+                <!-- scheme 默认值 content/file -->
                 <data android:mimeType="video/*" />
             </intent-filter>
         </activity>
