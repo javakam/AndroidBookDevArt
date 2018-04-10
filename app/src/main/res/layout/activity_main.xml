@@ -57,5 +57,13 @@
             android:onClick="test4"
             android:text="@string/strIntentFilter"
             app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:onClick="test5"
+            android:text="@string/strChapter2Ipc"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
     </LinearLayout>
 </ScrollView>

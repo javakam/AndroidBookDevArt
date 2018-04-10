@@ -12,6 +12,7 @@ import com.art.exploration.Chapter1.AActivity;
 import com.art.exploration.Chapter1.ScrollingActivity;
 import com.art.exploration.Chapter1.intentfilter.SelectFilterActivity;
 import com.art.exploration.Chapter1.launchmode.ALActivity;
+import com.art.exploration.Chapter2.Chapter2;
 
 /**
  * GitHub  http://www.cnblogs.com/jooy/p/8683167.html
@@ -72,6 +73,16 @@ public class MainActivity extends AppCompatActivity {
      */
     public void test4(View view) {
         startActivity(new Intent(this, SelectFilterActivity.class));
+    }
+
+    /**
+     * IPC机制 - 通过ddms查看 com.art.exploration.Chapter2.SecondActivity 和 com.art.exploration.Chapter2.ThirdActivity
+     * 的进程号
+     *
+     * @param view
+     */
+    public void test5(View view) {
+        startActivity(new Intent(this, Chapter2.class));
     }
     //=========================================================LINE==========================================================//
 

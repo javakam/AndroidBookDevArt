@@ -116,6 +116,16 @@
                 <data android:mimeType="video/*" />
             </intent-filter>
         </activity>
+
+        <!-- Chapter 2 IPC机制 -->
+        <activity android:name=".Chapter2.Chapter2"></activity>
+        <activity
+            android:name=".Chapter2.SecondActivity"
+            android:process=":remote" />
+        <activity
+            android:name=".Chapter2.ThirdActivity"
+            android:process="com.art.exploration.remote" />
+
     </application>
 
 </manifest>
