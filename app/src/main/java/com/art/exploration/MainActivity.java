@@ -12,6 +12,7 @@ import com.art.exploration.Chapter1.AActivity;
 import com.art.exploration.Chapter1.ScrollingActivity;
 import com.art.exploration.Chapter1.intentfilter.SelectFilterActivity;
 import com.art.exploration.Chapter1.launchmode.ALActivity;
+import com.art.exploration.Chapter1.savestate.SaveInstanceStateActivity;
 import com.art.exploration.Chapter2.Chapter2;
 
 /**
@@ -82,6 +83,15 @@ public class MainActivity extends AppCompatActivity {
      */
     public void test5(View view) {
         startActivity(new Intent(this, Chapter2.class));
+    }
+
+    /**
+     * 应用的数据恢复 - onSaveInstanceState
+     *
+     * @param view
+     */
+    public void test6(View view) {
+        startActivity(new Intent(this, SaveInstanceStateActivity.class));
     }
     //=========================================================LINE==========================================================//
 

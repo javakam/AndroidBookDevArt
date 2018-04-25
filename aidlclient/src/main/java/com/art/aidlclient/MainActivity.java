@@ -1,7 +1,6 @@
 package com.art.aidlclient;
 
 import android.content.ComponentName;
-import android.content.Context;
 import android.content.Intent;
 import android.content.ServiceConnection;
 import android.os.Bundle;
@@ -40,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         initViews();
         bindSumAIDLService();
+
     }
 
     private void initViews() {
@@ -59,6 +59,7 @@ public class MainActivity extends AppCompatActivity {
         startService(intent);
 //        mLog.append("Binding service…\n");
         bindService(intent, conn, BIND_AUTO_CREATE);
+
     }
 
     public void sumByAIDL(View view) {
@@ -76,4 +77,6 @@ public class MainActivity extends AppCompatActivity {
         super.onDestroy();
         unbindService(conn);
     }
+
+
 }

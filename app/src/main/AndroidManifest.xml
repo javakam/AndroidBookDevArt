@@ -3,6 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.art.exploration">
 
+    <!--文件读写-->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
     <application
         android:name=".MyApplication"
         android:allowBackup="true"
@@ -133,9 +137,11 @@
             android:enabled="true"
             android:exported="true"
             android:label="@string/app_name"
-            tools:ignore="ExportedService">
+            tools:ignore="ExportedService" />
 
-        </service>
+        <activity android:name=".Chapter1.savestate.SaveInstanceStateActivity" />
+        <activity android:name=".Chapter2.ipc.ShareFileWriteObjActivity" />
+        <activity android:name=".Chapter2.ipc.ShareFileReadObjActivity"></activity>
     </application>
 
 </manifest>

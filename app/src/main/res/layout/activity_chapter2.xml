@@ -8,16 +8,28 @@
     tools:context="com.art.exploration.Chapter2.Chapter2">
 
     <Button
-        android:onClick="goSecondActivity"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="#efa"
+        android:onClick="goSecondActivity"
         android:text="启动SecondActivity" />
 
     <Button
-        android:onClick="goThirdActivity"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="#efa"
+        android:onClick="goThirdActivity"
         android:text="启动ThirdActivity" />
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_margin="3dp" />
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="goShareFileActivity"
+        android:text="IPC六种方式：2.使用共享文件" />
 </android.support.v7.widget.LinearLayoutCompat>

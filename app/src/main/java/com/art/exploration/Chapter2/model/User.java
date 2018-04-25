@@ -50,4 +50,15 @@ public class User implements Parcelable {
             return new User[size];
         }
     };
+
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "userId=" + userId +
+                ", userName='" + userName + '\'' +
+                ", isMale=" + isMale +
+                ", book=" + book +
+                '}';
+    }
 }
